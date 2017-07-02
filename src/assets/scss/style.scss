@@ -1,0 +1,15 @@
+@import "../../../node_modules/normalize.css/normalize.css";
+@import "fonts";
+@import "variables";
+@import "../../components/header/header";
+@import "../../components/footer/footer";
+
+body{
+  background-color: $body-color;
+}
+
+.todo-app{
+  margin: 0;
+  padding: 0;
+}
+

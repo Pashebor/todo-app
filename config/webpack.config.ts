@@ -1,16 +1,24 @@
 import * as path from 'path';
 import * as webpack from 'webpack';
+import * as autoprefixer from 'autoprefixer';
+import * as ExtractTextPlugin from 'extract-text-webpack-plugin';
+import * as CopyWebpackPlugin from 'copy-webpack-plugin';
+
 
 const rootPath = path.resolve(__dirname, "../");
+const root = path.resolve(__dirname, '../src');
 const assetsPath = path.resolve(rootPath, "./dist/static/");
 
 const config: webpack.Configuration = {
-    context: path.resolve(__dirname, ".."),
-    entry: "./src/TodoApp.tsx",
+    context: path.join(__dirname, "src"),
+    entry: {
+        bundle: path.resolve(root, 'TodoApp.tsx'),
+        style: path.resolve(root, 'assets/scss/style.scss'),
+    },
     output: {
         path: assetsPath,
         publicPath: "/static/",
-        filename: "bundle.js",
+        filename: "[name].js",
     },
     devtool: "#source-map",
     resolve:{
@@ -21,10 +29,21 @@ const config: webpack.Configuration = {
             {
                 test: /\.tsx?$/,
                 loader: "ts-loader"
-            }
+            },
+            {
+                test: /\.scss$/,
+                use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader!postcss-loader!sass-loader' })
+            },
+            {
+                test: /\.(eot|ttf|woff|woff2|otf)$/,
+                loader: 'file-loader?name=fonts/[name].[ext]'
+            },
         ]
-    }
-    /*plugins: []*/
+    },
+    watch: true,
+    plugins: [
+        new ExtractTextPlugin({ filename: './[name].css', disable: false, allChunks: true })
+    ]
 };
 
 export default config;
