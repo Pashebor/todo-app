@@ -6,6 +6,7 @@ class DefaultScreen extends React.Component<StartScreenProps>{
     render() {
         return(
             <main>
+                <p>hi</p>
                 <Link to={'login'}>login</Link>
             </main>
         )

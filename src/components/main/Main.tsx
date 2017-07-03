@@ -11,11 +11,11 @@ class Main extends React.Component {
         return(
             <section>
                 <BrowserRouter>
-                <Switch>
-                    <Route exact path="/" component={DefaultScreen} />
-                    <Route path="/login/" component={Login} />
-                </Switch>
-              </BrowserRouter>
+                    <Switch>
+                        <Route exact path="/" component={DefaultScreen} />
+                        <Route path="/login/" component={Login} />
+                    </Switch>
+                </BrowserRouter>
             </section>
         )
     }
