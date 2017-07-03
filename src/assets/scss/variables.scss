@@ -17,7 +17,7 @@ $footer-bg-color: #9E9E9E;
 
 @mixin slide-right{
   position: relative;
-  animation: slide-right-anim 0.7s 1 linear;
+  animation: slide-right-anim 0.8s 1 ;
 }
 
 @keyframes fade-in-anim {
@@ -26,6 +26,6 @@ $footer-bg-color: #9E9E9E;
 }
 
 @keyframes slide-right-anim {
-  from {left: 145px;}
-  to {left: 0;}
+  from {right: -40px;}
+  to {right: 0;}
 }

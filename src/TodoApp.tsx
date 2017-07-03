@@ -10,7 +10,6 @@ export interface Logo {
 }
 
 const TodoApp = () => {
-    console.log(this.props);
     return(
         <div className="todo-app">
             <Header name="Записная книжка"/>
@@ -21,10 +20,4 @@ const TodoApp = () => {
 
 };
 
-render(
-
-        <Router>
-            <Route path="/" component="Main"/>
-        </Router>,
-    document.getElementById('todo-app')
-);
+render(<TodoApp />, document.getElementById('todo-app'));

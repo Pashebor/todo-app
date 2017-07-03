@@ -1,0 +1,8 @@
+.login{
+  text-align: center;
+  &__title{
+    font-size: 25px;
+    font-family: $primary-font;
+    color: black;
+  }
+}

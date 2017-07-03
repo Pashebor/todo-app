@@ -3,6 +3,7 @@
 @import "variables";
 @import "../../components/header/header";
 @import "../../components/footer/footer";
+@import "../../components/main/login/login";
 
 body{
   background-color: $body-color;
@@ -11,5 +12,10 @@ body{
 .todo-app{
   margin: 0;
   padding: 0;
+}
+
+.container{
+  width: 1170px;
+  margin: auto;
 }
 
