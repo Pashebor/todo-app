@@ -1,22 +1,24 @@
 import * as React from 'react';
-import DefaultScreen from "./start-screen/StartScreen";
+import StartScreen from "./start-screen/StartScreen";
 import Login from "./login/Login";
 import {BrowserRouter, Route, RouteComponentProps, Switch} from 'react-router-dom';
+import {MainProps} from "../../TodoApp";
+import Registration from "./registration/Registration";
 
 export interface StartScreenProps extends RouteComponentProps<any> {}
 export interface LoginProps extends RouteComponentProps<any> {}
+export interface RegisterProps extends RouteComponentProps<any> {}
 
-class Main extends React.Component {
+class Main extends React.Component<MainProps> {
     render() {
         return(
-            <section>
                 <BrowserRouter>
                     <Switch>
-                        <Route exact path="/" component={DefaultScreen} />
-                        <Route path="/login/" component={Login} />
+                        <Route exact path="/" component={StartScreen} />
+                        <Route path="/login" component={Login} />
+                        <Route path="/register" component={Registration} />
                     </Switch>
                 </BrowserRouter>
-            </section>
         )
     }
 }

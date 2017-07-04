@@ -21,6 +21,12 @@ const config: webpack.Configuration = {
         filename: "[name].js",
     },
     devtool: "#source-map",
+    devServer: {
+        port: 8080,
+        historyApiFallback: {
+            index: 'index.html'
+        }
+    },
     resolve:{
         extensions: ["*", ".webpack.js", ".web.js", ".ts", ".tsx", ".js", ".jsx"],
     },
