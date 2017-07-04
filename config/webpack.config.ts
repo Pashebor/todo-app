@@ -44,11 +44,18 @@ const config: webpack.Configuration = {
                 test: /\.(eot|ttf|woff|woff2|otf)$/,
                 loader: 'file-loader?name=fonts/[name].[ext]'
             },
+            {
+                test: /\.(svg)|(png)|(jpg)$/,
+                loader: 'file-loader?name=images/[name].[ext]'
+            },
         ]
     },
     watch: true,
     plugins: [
-        new ExtractTextPlugin({ filename: './[name].css', disable: false, allChunks: true })
+        new ExtractTextPlugin({ filename: './[name].css', disable: false, allChunks: true }),
+       /* new CopyWebpackPlugin([
+            { from: '/images', to: './images/' }
+        ])*/
     ]
 };
 

@@ -1,0 +1,33 @@
+.start-screen{
+  text-align: center;
+  background-size: cover;
+  margin-top: 50px;
+  background: url(../images/clipboard.png) no-repeat center center;
+  &__content{}
+
+  &__title{
+    @extend .login__title;
+  }
+  &__subtitle{
+    font-size: 25px;
+    font-family: $content-font;
+    color: black;
+    font-weight: 600;
+    line-height: 27px;
+    margin-bottom: 10px;
+  }
+  &__variants{
+    font-size: 25px;
+    font-family: $content-font;
+    color: black;
+    font-weight: 600;
+    line-height: 27px;
+    margin-bottom: 10px;
+    span:first-child{
+      color: $red-color;
+    }
+    span:last-child{
+      color: $green-color;
+    }
+  }
+}

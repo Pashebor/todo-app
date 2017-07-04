@@ -1,6 +1,7 @@
 .login{
+  position: relative;
   text-align: center;
-  margin-top: 10%;
+  top: calc(50% - 143px);
   &__title{
     font-size: 25px;
     font-family: $primary-font;

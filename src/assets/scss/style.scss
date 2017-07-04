@@ -6,6 +6,7 @@
 @import "../../components/main/login/login";
 @import "../../components/main/registration/registration";
 @import "../../components/main/authorization-form/form";
+@import "../../components/main/start-screen/start-screen";
 
 body{
   background-color: $body-color;
@@ -24,8 +25,7 @@ body{
 .submit-btn{
   cursor: pointer;
   font-size: 20px;
-  width: 100px;
-  height: 40px;
+  padding: 5px 25px;
   margin: auto;
   background-color: $green-color;
   font-family: $content-font;
@@ -33,7 +33,7 @@ body{
   color: white;
   border: 1px solid #388E3C;
   outline: none;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 0 5px 5px -5px gray;
   transition: all 0.3s ease-in;
   &:hover{
@@ -98,5 +98,10 @@ body{
   flex-flow: row;
   margin-top: 40px;
   justify-content: center;
+}
+
+.wrapper{
+  background-color: rgba(246, 246, 246, 0.95);
+  padding: 50px 0 160px 0;
 }
 

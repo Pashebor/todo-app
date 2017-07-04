@@ -16,13 +16,13 @@ export interface MainProps extends RouteComponentProps<any>{}
 const TodoApp = () => {
 
     return(
-        <div className="todo-app">
+        <div>
             <BrowserRouter>
-               <div>
-                 <Route path='/' component={Header}/>
-                 <Route exact path='/' component={Main}/>
-                 <Route path='/login' component={Login}/>
-                 <Route path='/register' component={Registration}/>
+                <div className="todo-app">
+                    <Route path='/' component={Header}/>
+                    <Route exact path='/' component={Main}/>
+                    <Route path='/login' component={Login}/>
+                    <Route path='/register' component={Registration}/>
                </div>
             </BrowserRouter>
             <Footer name="Pashebor's laba"/>
