@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom';
 
 
 class Registration extends React.Component<RegisterProps> {
+
     render() {
         return(
             <main className="registration">

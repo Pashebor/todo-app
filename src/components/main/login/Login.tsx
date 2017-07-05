@@ -7,14 +7,19 @@ class Login extends React.Component<any, LoginProps>{
     render() {
         return(
             <main className="login">
-               <div className="container">
-                   <h2 className="login__title">Авторизация</h2>
-                   <AuthorizationForm/>
-                   <nav className="navigation-block">
-                       <Link to={'/'} className="link link--back">Вернуться</Link>
-                       <Link to={'/register'} className="link link--register">Регистрация</Link>
-                   </nav>
-               </div>
+                <div className="wrapper">
+                    <div className="container">
+                        <h2 className="login__title">Авторизация</h2>
+                        <AuthorizationForm/>
+                        <nav className="navigation-block">
+
+                            <Link to={'/'} className="link link--back">Вернуться</Link>
+
+                            <Link to={'/register'} className="link link--register">Регистрация</Link>
+
+                        </nav>
+                    </div>
+                </div>
             </main>
         )
     }

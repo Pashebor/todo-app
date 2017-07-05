@@ -45,7 +45,7 @@ const config: webpack.Configuration = {
                 loader: 'file-loader?name=fonts/[name].[ext]'
             },
             {
-                test: /\.(svg)|(png)|(jpg)$/,
+                test: /\.(svg)|(png)|(jpg)|(gif)$/,
                 loader: 'file-loader?name=images/[name].[ext]'
             },
         ]
