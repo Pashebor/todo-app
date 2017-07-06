@@ -3,11 +3,12 @@ import * as webpack from 'webpack';
 import * as autoprefixer from 'autoprefixer';
 import * as ExtractTextPlugin from 'extract-text-webpack-plugin';
 import * as CopyWebpackPlugin from 'copy-webpack-plugin';
+import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 
-
-const rootPath = path.resolve(__dirname, "../");
-const root = path.resolve(__dirname, '../src');
+const rootPath = path.resolve(__dirname, "src");
+const root = path.resolve(__dirname, 'src');
 const assetsPath = path.resolve(rootPath, "./dist/static/");
+const outputPath = path.resolve(__dirname, 'dist');
 
 const config: webpack.Configuration = {
     context: path.join(__dirname, "src"),
@@ -16,8 +17,7 @@ const config: webpack.Configuration = {
         style: path.resolve(root, 'assets/scss/style.scss'),
     },
     output: {
-        path: assetsPath,
-        publicPath: "/static/",
+        path: outputPath,
         filename: "[name].js",
     },
     devtool: "#source-map",
@@ -52,10 +52,13 @@ const config: webpack.Configuration = {
     },
     watch: true,
     plugins: [
+        new HtmlWebpackPlugin({
+            template: path.resolve(rootPath, './index.html')
+        }),
         new ExtractTextPlugin({ filename: './[name].css', disable: false, allChunks: true }),
-       /* new CopyWebpackPlugin([
-            { from: '/images', to: './images/' }
-        ])*/
+        new CopyWebpackPlugin([
+            { from: 'assets/images', to: 'images/' }
+        ])
     ]
 };
 

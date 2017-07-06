@@ -31,4 +31,18 @@
     font-family: $content-font;
     color: darkgray;
   }
+  &__file {
+    display: none;
+  }
+
+  &__image{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    border: 2px solid $inputs-border;
+  }
+
 }

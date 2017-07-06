@@ -8,7 +8,6 @@ class DefaultScreen extends React.Component<StartScreenProps>{
             <main className="start-screen">
                <div className="wrapper">
                    <div className="container">
-                      <div className="start-screen__content">
                           <h2 className="start-screen__title">Добро пожаловать в заметки онлайн!</h2>
                           <h5 className="start-screen__subtitle">Вы не зарегистрировались, либо не авторизовались <br/>для продолжения нажмите</h5>
                           <p className="start-screen__variants"><span>СЮДА</span> или <span>СЮДА</span></p>
@@ -16,7 +15,6 @@ class DefaultScreen extends React.Component<StartScreenProps>{
                               <Link to={'/login'} className="link link--back">Авторизация</Link>
                               <Link to={'/register'} className="link link--register">Регистрация</Link>
                           </nav>
-                      </div>
                    </div>
                </div>
             </main>

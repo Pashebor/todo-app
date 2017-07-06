@@ -1,6 +1,8 @@
 .registration{
-  @extend .login;
-  &__title{
+  @extend .start-screen;
+  background-image: url(../images/register.png) !important;
 
+  &__title{
+    @extend .login__title;
   }
 }
