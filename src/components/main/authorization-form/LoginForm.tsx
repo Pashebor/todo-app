@@ -1,6 +1,9 @@
 import * as React from 'react';
+import {loginUser} from '../../../actions/actions';
+import {Props} from "../Main";
 
-class LoginForm extends React.Component{
+class LoginForm extends React.Component<Props>{
+
     render() {
         return(
             <form className="form" encType="multipart/form-data">

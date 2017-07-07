@@ -31,8 +31,6 @@ class AuthorizationForms extends React.Component<UrlParameter>{
         }
     }
 
-
-
     render() {
         return(
             <section className="form-block">

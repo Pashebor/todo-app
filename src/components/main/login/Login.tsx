@@ -4,6 +4,7 @@ import {LoginProps} from "../Main";
 import AuthorizationForms from '../authorization-form/AuthorizationForms';
 
 class Login extends React.Component<any, LoginProps>{
+
     render() {
         return(
             <main className="login">

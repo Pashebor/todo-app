@@ -5,12 +5,14 @@ import {BrowserRouter, Route, RouteComponentProps, Switch} from 'react-router-do
 import {MainProps} from "../../TodoApp";
 import Registration from "./registration/Registration";
 
-export interface StartScreenProps extends RouteComponentProps<any> {}
-export interface LoginProps extends RouteComponentProps<any> {}
+export interface Props {formData: any;}
+export interface StartScreenProps extends RouteComponentProps<any>{}
+export interface LoginProps extends RouteComponentProps<any>{}
 export interface RegisterProps extends RouteComponentProps<any> {}
 
 class Main extends React.Component<MainProps> {
     render() {
+
         return(
                 <BrowserRouter>
                     <Switch>

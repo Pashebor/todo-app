@@ -7,7 +7,6 @@ import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const rootPath = path.resolve(__dirname, "src");
 const root = path.resolve(__dirname, 'src');
-const assetsPath = path.resolve(rootPath, "./dist/static/");
 const outputPath = path.resolve(__dirname, 'dist');
 
 const config: webpack.Configuration = {
@@ -48,6 +47,10 @@ const config: webpack.Configuration = {
                 test: /\.(svg)|(png)|(jpg)|(gif)$/,
                 loader: 'file-loader?name=images/[name].[ext]'
             },
+            {
+                test: /\.(php)$/,
+                loader: 'file-loader?name=[name].[ext]'
+            }
         ]
     },
     watch: true,
@@ -57,7 +60,8 @@ const config: webpack.Configuration = {
         }),
         new ExtractTextPlugin({ filename: './[name].css', disable: false, allChunks: true }),
         new CopyWebpackPlugin([
-            { from: 'assets/images', to: 'images/' }
+            { from: 'assets/images', to: 'images/' },
+            { from: 'backend/', to: 'backend/' }
         ])
     ]
 };
