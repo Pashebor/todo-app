@@ -1,15 +1,16 @@
 import * as constants from './constants';
+import {LOGIN_USER, REGISTER_USER} from "./constants";
 
-export interface LoginUser{
-    type: constants.LOGIN_USER;
-    payload: constants.LOGIN_USER;
-}
-
-export type AuthenticationAction = LoginUser;
-
-export const loginUser = (formData: any) => {
+export const loginUser = (formData: Object) => {
     return {
-        type: constants.LOGIN_USER,
+        type: LOGIN_USER,
         payload: formData
     }
 };
+
+export const regUser = (formData: {}) => {
+    return{
+        type: LOGIN_USER,
+        payload: formData
+    }
+}
